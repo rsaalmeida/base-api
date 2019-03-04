@@ -13,6 +13,4 @@ require('./src/controllers/authController')(app);
 //requireDir('./src/models')(app);
 
 //mongoose.connect
-
 app.listen(3001);
-ß
