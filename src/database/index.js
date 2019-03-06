@@ -1,6 +1,9 @@
 const mongose = require('mongoose');
 
-mongose.connect('mongodb://localhost/baseapi',{useNewUrlParser:true});
+mongose.connect('mongodb://localhost/baseapi',{ 
+    useCreateIndex: true,
+    useNewUrlParser : true
+});
 
 mongose.Promise = global.Promise;
 
