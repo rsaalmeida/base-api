@@ -40,6 +40,7 @@ router.post('/authenticate', async (req,res) => {
     if(!await bcrypt.compare(password, user.password) )
         return res.status(400).send({error: 'Senha Inválida'});
 
+    user.password = undefined;
     return res.send({user});
 
 });
